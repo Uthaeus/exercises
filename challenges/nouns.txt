@@ -1,0 +1,15 @@
+boy
+woman
+student
+girl
+teacher
+president
+man
+mother
+book
+tree
+bird
+idea
+place
+picture
+dog
