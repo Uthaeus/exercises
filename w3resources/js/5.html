@@ -12,6 +12,13 @@
 
 <script>
   let thing = document.getElementById('display');
-  let thing.innerHTML = 'w3resource';
+  thing.innerHTML = 'w3resource';
+
+  setInterval(function() {
+    let temp = thing.innerHTML;
+    temp = temp[temp.length - 1] + temp.slice(0, temp.length - 1);
+
+    thing.innerHTML = temp;
+  }, 1000)
 </script>
 </html>
