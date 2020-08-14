@@ -1,4 +1,4 @@
-require_relative "casino_parts.rb"
+howhowrequire_relative "casino_parts.rb"
 require_relative "blackjack_parts.rb"
 
 @wallet = 100

@@ -6,7 +6,7 @@ years = (1900..1999).to_a
 leap_years = []
 
 years.each do |year|
-  leap_years << year if year % 4 == 0 && year % 100 != 0
+  leap_years << year if year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)
 end
 
 leap_years

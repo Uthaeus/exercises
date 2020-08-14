@@ -6,7 +6,7 @@ def hello_world
 end
 
 def num_string str 
-  words = str.split
+  words = str.split(//)
   nums = words.select { |i| i[/\d+/] } 
   nums.map { |x| x.to_i }.reduce(:+)
 end
@@ -19,5 +19,7 @@ describe 'HelloWorld' do
 end
 
 describe 'num_string' do 
-  
+  it 'extracts numbers then sums them' do 
+    expect(num_string('Hello1 World2!3')).to eq(6)
+  end
 end
