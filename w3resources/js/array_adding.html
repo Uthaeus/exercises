@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Adder</title>
+</head>
+<body>
+  <div id='title'>Adding to an array</div>
+
+  <div id='inputs'>
+    <input type='text' id='input' />
+    <button type='button' id='add' onclick='add()'>Add</button>
+    <button type='button' id='disp' onclick='display()'>Display</button>
+  </div>
+  <div id='display'>
+
+  </div>
+</body>
+<script>
+  const wordArray = [];
+  const add = () => {
+    let temp = document.getElementById('input');
+    wordArray.push(temp.value);
+  }
+  const display = () => {
+    let element = document.getElementById('display');
+    element.innerHTML = '';
+    for (let x = 0; x < wordArray.length; x++) {
+      let tag = document.createElement('p');
+      let text = document.createTextNode(wordArray[x])
+      tag.appendChild(text);
+      element.appendChild(tag);
+    }
+  }
+</script>
+
+</html>
