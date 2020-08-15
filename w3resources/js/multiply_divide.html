@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mult/Div</title>
+</head>
+<body>
+  <div id='numOne'>
+    <input type='text' label='1st Number' id='inOne' /> 
+  </div>
+  <div id='numTwo'>
+    <input type='text' label='2nd Number' id='inTwo' />
+  </div>
+  <div id='buttons'>
+    <button type='button' id='mult_button' onclick='mult()'>Multiply</button>
+    <button type='button' id='div_button' onclick='div()'>Divide</button>
+    <button type='button' id='resetButton' onclick='resets()'>Reset</button>
+  </div>
+  <div id='output'></div>
+</body>
+<script>
+
+  const mult = () => {
+    let numOne = document.getElementById('inOne').value;
+    let numTwo = document.getElementById('inTwo').value;
+
+    let result = numOne * numTwo;
+
+    let output = document.getElementById('output');
+    output.innerHTML = result;
+  }
+
+  const div = () => {
+    let numOne = document.getElementById('inOne').value;
+    let numTwo = document.getElementById('inTwo').value;
+
+    let result = numOne / numTwo;
+    let output = document.getElementById('output');
+    output.innerHTML = result;
+  }
+
+  const resets = () => {
+    let output = document.getElementById('output');
+    output.innerHTML = 'please enter numbers';
+
+    let numOne = document.getElementById('inOne');
+    numOne.value = 0;
+
+    let numTwo = document.getElementById('inTwo');
+    numTwo.value = 0;
+  }
+</script>
+
+</html>
