@@ -116,12 +116,14 @@ const getRating = arr => {
   var averageRating;
   let scoreList = [];
 
-  for (let x = 0; x < arr.length; x++) {
-    if (arr[x]["Director"] == 'Christopher Nolan') {
-      scoreList.push(+arr[x]["imdbRating"]);
+  let reduced = arr.filter((k, v) => {
+    if (v['Director'] == 'Christopher Nolan') {
+      console.log(+v['imdbRating']);
+      return +v['imdbRating'];
     }
-  }
-  averageRating = scoreList.reduce((a, b) => a += b) / scoreList.length;
+  });
+
+  console.log(typeof reduced);
 
   return averageRating;
 }
