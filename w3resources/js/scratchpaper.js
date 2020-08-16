@@ -29,7 +29,14 @@
 function whatIsInAName(collection, source) {
   var arr = [];
   
-  console.log(collection.length);
+  let reduced = collection.filter(a => {
+    console.log(source);
+    console.log(a[source]);
+  })
+
+  console.log(reduced);
+
+  
   return arr;
 }
 
