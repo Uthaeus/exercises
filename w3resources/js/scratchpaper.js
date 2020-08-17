@@ -27,14 +27,10 @@
 
 
 function whatIsInAName(collection, source) {
-  var arr = [];
-  
-  let reduced = collection.filter(a => {
-    console.log(source);
-    console.log(a[source]);
+  var arr = collection.filter(a => {
+    let temp = Object.keys(source)
+    return a[temp] == source[temp];
   })
-
-  console.log(reduced);
 
   
   return arr;
