@@ -18,8 +18,13 @@ const newBoard = () => {
 }
 
 
-// const createTile = (x, y, value = '') {
+const createTile = (x, y, value = '') => {
+    let props = [{
+        x : x,
+        y : y,
+        value : value
+    }];
     
-// }
+}
 
 intro();
