@@ -1,4 +1,13 @@
+#playerOneArea {
+    height: 200px;
+}
+
+#gameBoard {
+    margin-left: 25%;
+}
+
 .grid {
+    width: 50%;
     display: grid;
     grid-gap: 1px;
     grid-template-columns: repeat(3, 1fr);
