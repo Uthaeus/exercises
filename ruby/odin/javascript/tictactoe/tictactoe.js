@@ -8,23 +8,29 @@ const intro = () => {
     el.appendChild(tag);
 }
 
-const newBoard = () => {
+const board = [];
 
-    for (let x = 0; x < 3; x++) {
-        for (let y = 0; y < 3; y++) {
-            createTile(x, y);
-        }
+const newBoard = (arr) => {
+
+    for (let x = 0; x < 9; x++) {
+        arr.push(createTile(x));
     }
 }
 
 
-const createTile = (x, y, value = '') => {
-    let props = [{
-        x : x,
-        y : y,
-        value : value
-    }];
+const createTile = (x, value = ' ') => {
+    let id = x;
+    let val = value;
     
+    return [id, val]
+}
+
+const disp = (arr) => {
+    for (let x = 0; x < arr.length; x++) {
+        let element = document.getElementById('gameBoard');
+        let tempTag = document.createElement('div');
+        
+    }
 }
 
 intro();
