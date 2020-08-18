@@ -1,11 +1,13 @@
 
 const intro = () => {
     let el = document.getElementById('introBoard');
-    let tag = document.createElement('p');
+    let tagg = document.createElement('p');
     let text = document.createTextNode("Welcome to tictactoe");
 
-    tag.appendChild(text);
-    el.appendChild(tag);
+    tagg.appendChild(text);
+    console.log(text);
+    console.log(tagg); 
+    el.appendChild(tagg);
 }
 
 const board = [];
@@ -29,8 +31,13 @@ const disp = (arr) => {
     for (let x = 0; x < arr.length; x++) {
         let element = document.getElementById('gameBoard');
         let tempTag = document.createElement('div');
+        let content = document.createTextNode(`${arr[x][1]}`);
+
+        tempTag.appendChild(content);
         
+        element.appendChild(tempTag);
     }
+    
 }
 
 intro();
